@@ -1,0 +1,8 @@
+
+2011-03-02  Oscar Nygren  <o.nygren@gmail.com>
+	* Created this CHANGELOG
+	* Updated the links to css and js files
+	* Moved the subprojects into own subdirectories
+
+2011-03-03  Oscar Nygren  <o.nygren@gmail.com>
+	* Fixed bad paths to images in css/styles.css and index.html

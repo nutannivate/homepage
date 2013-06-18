@@ -1,0 +1,7 @@
+
+2011-03-02  Oscar Nygren  <o.nygren@gmail.com>
+	* Created this CHANGELOG
+	* Reformatted the source file
+	* Header comment edited
+	* Finished the HasClass,AddClass and RemoveClass functions
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+	<title>Videos &ndash; Webdesign</title>
+	<link rel='stylesheet' type='text/css' href='css/styles.css' />
+	<link rel='stylesheet' type='text/css' href='css/fffix.css' />
+	<script type='text/javascript' src='js/jquery-1.5.min.js'></script>
+	<script type='text/javascript' src='CssUtils/cssutils-0.0.1-alpha.js'></script>
+	<script type='text/javascript' src='ShareThis/sharethis-0.0.1-alpha.js'></script>
+	<script type='text/javascript' src='ShareThis/sharethis-tests-0.0.1-alpha.js'></script>
+	<script type='text/javascript' src='js/scripts.js'></script>
+	<script type='text/javascript' src='js/jwplayer.js'></script>
+	<script type='text/javascript' src='js/videos.js'></script>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+</head>
+<body>
+	<div id='share-this'>
+		<ul>
+			<li><a href='http://facebook.com/'><img src='images/social_media/Social_Facebook.png' alt='Facebook' /></a></li>
+			<li><a href='http://reddit.com/'><img src='images/social_media/Social_Reddit.png' alt='Reddit' /></a></li>
+			<li><a href='http://youtube.com/'><img src='images/social_media/Social_Youtube.png' alt='Youtube' /></a></li>
+			<!--<li><a href='./rss.html'><img src='images/social_media/Social_RSS.png' alt='RSS' /></a></li>
+			<li><a href='./rssmail.html'><img src='images/social_media/Social_Email_RSS.png' alt='RSS via E-mail' /></a></li>
+			<li><a href='./emailafriend.html'><img src='images/social_media/Social_Email.png' alt='Mail this page to a friend' /></a></li>-->
+
+		</ul>
+	</div>
+	
+	<div id='header-outer'>
+		<div id='header-inner' class='boxshadow-bottom'>
+			<div id='headtext'>
+				<h1>Welcome</h1>
+			</div>
+			<div id='headmenu'>
+				<ul>
+					<li><a href='./index.html'>Start</a></li>
+					<li><a href='./video.html'>Video</a></li>
+					<li><a href='./kontakt.html'>Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id='footer-outer'>
+		<div id='footer-inner'>
+			<p>Copyright 2011, IIT Bombay</p>
+		</div>
+	</div>
+	
+	<div id='wrapper' class='boxshadow'>
+		<div id='pagehead'>
+			<h2>Video</h2>
+		</div>
+		<div id='content'>
+			<fieldset>
+				<legend>Adress till Youtube-film</legend>
+				<form action="#" method="post" id="ytForm">
+					<input type="text" id="ytUrl" />
+				</form>
+			</fieldset>
+			<div id='jwp-flash' class='video'>
+				<div id='jwp-flash-inner'>
+					The player is loading...
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

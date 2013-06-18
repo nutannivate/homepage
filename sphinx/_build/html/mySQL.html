@@ -1,0 +1,208 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>mySQL &mdash; homepage 0.9 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.9',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="homepage 0.9 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to homepage’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to homepage’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">homepage 0.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="mysql">
+<h1>mySQL<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install mysql-client mysql-server
+</pre></div>
+</div>
+</div>
+<div class="section" id="user-login-and-access-to-database">
+<h2>User login and Access to database<a class="headerlink" href="#user-login-and-access-to-database" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>mysql -u username -p dbname OR
+mysql -u username -p
+</pre></div>
+</div>
+</div>
+<div class="section" id="database">
+<h2>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h2>
+<p>To create a database</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">dbname</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>To display database names</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">SHOW</span> <span class="n">DATABASES</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>To create table</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">student</span> <span class="p">(</span><span class="n">name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span> <span class="n">age</span> <span class="nb">int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">Censored</span> <span class="nb">CHAR</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">birth</span> <span class="nb">DATE</span><span class="p">);</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">insert</span> <span class="k">into</span> <span class="n">student</span> <span class="k">values</span><span class="p">(</span><span class="ss">&quot;holy&quot;</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="ss">&quot;Y&quot;</span><span class="p">,</span><span class="ss">&quot;1992-01-14&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Auto increment primary key</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="k">table</span> <span class="n">school</span><span class="p">(</span><span class="n">id</span> <span class="nb">int</span> <span class="k">not</span> <span class="k">null</span> <span class="n">auto_increment</span> <span class="k">primary</span> <span class="k">key</span><span class="p">,</span> <span class="n">name</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="n">place</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>To display table names</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">DESCRIBE</span> <span class="n">TABLES</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>for logging out type</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">QUIT</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="alter-table">
+<h2>Alter table<a class="headerlink" href="#alter-table" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">alter</span> <span class="k">table</span> <span class="n">teacher</span> <span class="k">modify</span> <span class="n">id</span> <span class="nb">int</span> <span class="k">not</span> <span class="k">null</span> <span class="n">auto_increment</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">alter</span> <span class="k">table</span> <span class="n">school</span> <span class="k">modify</span> <span class="n">place</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">110</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Add new column to the table</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">alter</span> <span class="k">table</span> <span class="n">school</span> <span class="k">add</span> <span class="n">grade</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">alter</span> <span class="k">table</span> <span class="n">school</span> <span class="k">add</span> <span class="n">email</span> <span class="nb">text</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="k">first</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">alter</span> <span class="k">table</span> <span class="n">school</span> <span class="k">add</span> <span class="n">phone</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">after</span> <span class="n">name</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">alter</span> <span class="k">table</span> <span class="n">school</span> <span class="k">drop</span> <span class="n">email</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>before creating table user need to specify database name by</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>mysql -u root -p dbname
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">use</span> <span class="n">dbname</span> <span class="p">(</span><span class="s1">&#39;use&#39;</span> <span class="n">keyword</span> <span class="k">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">changing</span> <span class="n">the</span> <span class="k">database</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>if db not exists, then 1. create new database and 2. followed by &#8216;use statement&#8217;.</p>
+</div>
+<div class="section" id="privileges">
+<h2>Privileges<a class="headerlink" href="#privileges" title="Permalink to this headline">¶</a></h2>
+<p>We allow user root to connect to the server from localhost using the password &#8216;root&#8217;:</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">grant</span> <span class="k">usage</span> <span class="k">on</span> <span class="o">*</span><span class="p">.</span><span class="o">*</span> <span class="k">to</span> <span class="n">root</span><span class="o">@</span><span class="n">localhost</span> <span class="n">identified</span> <span class="k">by</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>finally we grant all privileges on the MY_DATA database to this user</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">grant</span> <span class="k">all</span> <span class="k">privileges</span> <span class="k">on</span> <span class="n">MY_DATAdb</span><span class="p">.</span><span class="o">*</span> <span class="k">to</span> <span class="n">root</span><span class="o">@</span><span class="n">localhost</span> <span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">grants</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="k">privileges</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>To get a list of MySQL users</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">select</span> <span class="k">user</span><span class="p">,</span><span class="k">host</span> <span class="k">from</span> <span class="n">mysql</span><span class="p">.</span><span class="k">user</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">grants</span> <span class="k">for</span> <span class="n">root</span><span class="o">@</span><span class="n">localhost</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>To change privileges, first revoke. Such as</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">revoke</span> <span class="k">all</span> <span class="k">privileges</span> <span class="k">on</span> <span class="o">*</span><span class="p">.</span><span class="o">*</span> <span class="k">from</span> <span class="s1">&#39;user&#39;</span><span class="o">@</span><span class="s1">&#39;host&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Then grant the appropriate privileges as desired</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">grant</span> <span class="k">SELECT</span><span class="p">,</span><span class="k">INSERT</span><span class="p">,</span><span class="k">UPDATE</span><span class="p">,</span><span class="k">DELETE</span> <span class="k">ON</span> <span class="o">`</span><span class="n">db</span><span class="o">`</span><span class="p">.</span><span class="o">*</span> <span class="k">TO</span> <span class="s1">&#39;user&#39;</span><span class="o">@</span><span class="s1">&#39;host&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Finally, flush</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="n">flush</span> <span class="k">privileges</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mySQL</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#user-login-and-access-to-database">User login and Access to database</a></li>
+<li><a class="reference internal" href="#database">Database</a></li>
+<li><a class="reference internal" href="#alter-table">Alter table</a></li>
+<li><a class="reference internal" href="#privileges">Privileges</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to homepage&#8217;s documentation!</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/mySQL.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to homepage’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">homepage 0.9 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, nutan.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

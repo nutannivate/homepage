@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+	<title>Play game! &ndash; Webdesign</title>
+	<link rel='stylesheet' type='text/css' href='css/styles.css' />
+	<link rel='stylesheet' type='text/css' href='css/fffix.css' />
+	<link rel='stylesheet' type='text/css' href='css/pong.css' />
+	<script type='text/javascript' src='js/jquery-1.5.min.js'></script>
+	<script type='text/javascript' src='js/jquery.md5.js'></script>
+	<script type='text/javascript' src='CssUtils/cssutils-0.0.1-alpha.js'></script>
+	<script type='text/javascript' src='ShareThis/sharethis-0.0.1-alpha.js'></script>
+	<script type='text/javascript' src='ShareThis/sharethis-tests-0.0.1-alpha.js'></script>
+	<script type='text/javascript' src='js/scripts.js'></script>
+	<script type='text/javascript' src='js/canvasDetection.js'></script>
+	<script type='text/javascript' src='js/pong.js'></script>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+</head>
+<body>
+	<div id='share-this'>
+		<ul>
+			<li><a href='http://facebook.com/'><img src='images/social_media/Social_Facebook.png' alt='Facebook' /></a></li>
+			<li><a href='http://reddit.com/'><img src='images/social_media/Social_Reddit.png' alt='Reddit' /></a></li>
+			<li><a href='http://youtube.com/'><img src='images/social_media/Social_Youtube.png' alt='Youtube' /></a></li>
+			<!--<li><a href='./rss.html'><img src='images/social_media/Social_RSS.png' alt='RSS' /></a></li>
+			<li><a href='./rssmail.html'><img src='images/social_media/Social_Email_RSS.png' alt='RSS via E-mail' /></a></li>
+			<li><a href='./emailafriend.html'><img src='images/social_media/Social_Email.png' alt='Mail this page to a friend' /></a></li>-->
+		</ul>
+	</div>
+	
+	<div id='header-outer'>
+		<div id='header-inner' class='boxshadow-bottom'>
+			<div id='headtext'>
+				<h1>Welcome</h1>
+			</div>
+			<div id='headmenu'>
+				<ul>
+					<li><a href='./index.html'>Start</a></li>
+					<li><a href='./video.html'>Video</a></li>
+					<li><a href='./kontakt.html'>Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id='footer-outer'>
+		<div id='footer-inner'>
+			<p>Copyright 2011, IIT Bomay</p>
+		</div>
+	</div>
+	
+	<div id='wrapper' class='boxshadow'>
+		<div id='pagehead'>
+			<h2>Play game</h2>
+		</div>
+		<div id='content'>
+			
+			<a href="javascript:Start();" id="html5start">Start</a>
+			<a href="javascript:Stop();" id="html5stop">Stop</a>
+			<pre id='html5debug'></pre>
+			<canvas id='html5test'>
+				<p>Oops. .</p>
+			</canvas>
+			<div id='submitPoints'>
+				<h3 id='score'></h3>
+				<fieldset>
+					<legend>Result</legend>
+					<form action='./hellvete' method='post' id="scoreForm">
+						Name: <input type='text' name='namn' id='namn' />&nbsp;<input type='submit' value='Search' />
+					</form>
+				</fieldset>
+			</div>
+			<div id='scoreDiv'>
+				<fieldset>
+					<legend>Top list</legend>
+					<ul id='scoreList'>
+					</ul>
+				</fieldset>
+			</div>
+			<div id='waiter'>Wait.</div>
+		</div>
+	</div>
+</body>
+</html>
